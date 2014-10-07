@@ -1,0 +1,43 @@
+{
+  "name": "artsy-ezel-components",
+  "version": "0.0.1",
+  "description": "A library of UI components shared across Artsy's Ezel-based apps.",
+  "keywords": [
+    "ezel",
+    "components",
+    "stylus",
+    "jade"
+  ],
+  "scripts": {
+    "test": "mocha pagination/test"
+  },
+  "author": {
+    "name": "Craig Spaeth",
+    "email": "craigspaeth@gmail.com",
+    "url": "http://craigspaeth.com"
+  },
+  "contributors": [
+    {
+      "name": "Brennan Moore",
+      "email": "brennanmoore@gmail.com",
+      "url": "http://brennanmoore.com"
+    },
+    {
+      "name": "Damon Zucconi",
+      "url": "http://damonzucconi.com"
+    }
+  ],
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "jade": "*",
+    "benv": "*",
+    "coffee-script": "*",
+    "underscore": "*",
+    "jquery": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigspaeth/artsy-ezel-components.git"
+  }
+}
