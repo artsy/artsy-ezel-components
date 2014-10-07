@@ -13,6 +13,17 @@
     "email": "craigspaeth@gmail.com",
     "url": "http://craigspaeth.com"
   },
+  "contributors": [
+    {
+      "name": "Brennan Moore",
+      "email": "brennanmoore@gmail.com",
+      "url": "http://brennanmoore.com"
+    },
+    {
+      "name": "Damon Zucconi",
+      "url": "http://damonzucconi.com"
+    }
+  ],
   "devDependencies": {
     "mocha": "*",
     "should": "*",
