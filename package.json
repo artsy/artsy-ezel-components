@@ -8,6 +8,9 @@
     "stylus",
     "jade"
   ],
+  "scripts": {
+    "test": "mocha pagination/test"
+  },
   "author": {
     "name": "Craig Spaeth",
     "email": "craigspaeth@gmail.com",
