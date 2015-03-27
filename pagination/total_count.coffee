@@ -15,6 +15,6 @@ module.exports = (token, url) ->
       page: 1
       total_count: 1
     ).
-    end (res) ->
+    end (err, res) ->
       dfd.resolve res.header['x-total-count']
   dfd.promise
