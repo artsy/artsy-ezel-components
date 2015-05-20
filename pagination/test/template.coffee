@@ -2,7 +2,7 @@ _ = require 'underscore'
 jade = require 'jade'
 path = require 'path'
 fs = require 'fs'
-benv = require 'benv'
+cheerio = require 'cheerio'
 
 render = (templateName) ->
   filename = path.resolve __dirname, "#{templateName}.jade"
@@ -12,15 +12,12 @@ render = (templateName) ->
   )
 
 describe 'Paginator template', ->
-  before (done) ->
-    benv.setup =>
-      benv.expose { $: benv.require 'jquery' }
-      @$cases = $(render('test')())
-      done()
+  before ->
+    $ = cheerio.load(render('test')())
+    @$cases = $('#cases')
 
   after ->
     @$cases.remove()
-    benv.teardown()
 
   describe '#paginate', ->
     describe '10 pages, @ page 5', ->
