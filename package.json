@@ -37,6 +37,7 @@
     "underscore": "*",
     "jquery": "*",
     "express": "*",
+    "stylus": "*",
     "q": "*",
     "superagent": "*"
   },
