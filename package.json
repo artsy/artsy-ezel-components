@@ -34,7 +34,9 @@
     "benv": "*",
     "coffee-script": "*",
     "underscore": "*",
-    "jquery": "*"
+    "jquery": "*",
+    "express": "*",
+    "stylus": "*"
   },
   "repository": {
     "type": "git",
