@@ -1,4 +1,4 @@
-Q = require 'q'
+Q = require 'bluebird-q'
 request = require 'superagent'
 
 # Makes a HEAD request,
