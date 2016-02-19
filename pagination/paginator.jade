@@ -6,9 +6,9 @@ mixin paginateHead(current, total, urlBase)
     if (current !== total)
       link( rel='next', href="#{urlBase}page=#{current + 1}" )
 
-mixin paginate(current, total, urlBase)
+mixin paginate(current, total, urlBase, pagesInterval)
   - var urlBase = urlBase || '?'
-  - var pagesInterval = 3
+  - var pagesInterval = pagesInterval || 3
 
   if total && total !== 1
     nav.bordered-pagination
@@ -29,7 +29,7 @@ mixin paginate(current, total, urlBase)
         //- Left surrounding pages
         - for (var i = pagesInterval; i > 0; i--) {
           - if (current > i)
-            li: a.paginator-page( data-value=(current - 1), href="#{urlBase}page=#{current - i}" ) #{current - i}
+            li: a.paginator-page( data-value=(current - i), href="#{urlBase}page=#{current - i}" ) #{current - i}
         - }
 
         //- Current page
@@ -38,7 +38,7 @@ mixin paginate(current, total, urlBase)
         //- Right surrounding pages
         - for (var i = 1; i <= pagesInterval; i++) {
           - if (((total - current) + 1) > i)
-            li: a( data-value=(current + 1), href="#{urlBase}page=#{current + i}" ) #{current + i}
+            li: a( data-value=(current + i), href="#{urlBase}page=#{current + i}" ) #{current + i}
         - }
 
       //- End page
