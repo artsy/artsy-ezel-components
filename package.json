@@ -1,6 +1,6 @@
 {
   "name": "artsy-ezel-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A library of UI components shared across Artsy's Ezel-based apps.",
   "keywords": [
     "ezel",
