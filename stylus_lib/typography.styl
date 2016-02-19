@@ -1,12 +1,62 @@
-default-avant-garde-font-size = 14px
-default-garamond-font-size = 16px
+default-avant-garde-font-size = 13px
+default-garamond-font-size = 17px
 
-avant-garde()
+foo()
+  color red
+
+avant-garde(fsize = 'body')
   font-family 'ITC Avant Garde Gothic W04', 'AvantGardeGothicITCW01D 731075', 'AvantGardeGothicITCW01Dm', 'Helvetica', 'sans-serif'
   font-smoothing antialiased
   text-transform uppercase
   letter-spacing 1px
+  if fsize == 's-headline'
+    font-size 11px
+    line-height 15px
+  else if fsize == 'body'
+    font-size 13px
+    line-height 17px
+  else if fsize == 'm-headline'
+    font-size 15px
+    line-height 20px
+  else if fsize == 'l-headline'
+    font-size 17px
+    line-height 22px
+  else if fsize
+    font-size fsize
 
-garamond()
+garamond(fsize = 's-body')
   font-family 'Adobe Garamond W08', 'adobe-garamond-pro', 'AGaramondPro-Regular', 'Times New Roman', 'Times', 'serif'
   font-smoothing antialiased
+  if fsize == 's-caption'
+    font-size 11px
+    line-height 16px
+  else if fsize == 'l-caption'
+    font-size 15px
+    line-height 19px
+  else if fsize == 's-body'
+    font-size 17px
+    line-height 26px
+  else if fsize == 'l-body'
+    font-size 20px
+    line-height 27px
+  else if fsize == 'headline'
+    font-size 30px
+    line-height 37px
+  else if fsize == 'l-headline'
+    font-size 37px
+    line-height 44px
+  else if fsize == 'xl-headline'
+    font-size 50px
+    line-height 50px
+  else if fsize == 'xxl-headline'
+    font-size 72px
+    line-height 72px
+  else if fsize
+    font-size fsize
+
+faux-underline(color=#333333, x=1px, y=5px)
+  text-decoration none
+  background-image linear-gradient(top, transparent 0, color 1px, transparent 0)
+  background-size x y
+  background-repeat repeat-x
+  background-position bottom
